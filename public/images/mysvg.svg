@@ -1,0 +1,6 @@
+<svg height="0">
+    <defs>
+        <linearGradient x1="4.62123025%" y1="-2.85127472%" x2="76.2163636%" y2="80.5536364%" id="purpleGradient"><stop stop-color="#FF0080" offset="0%"></stop><stop stop-color="#A924DD" offset="27.0162943%"></stop><stop stop-color="#6615D7" offset="49%"></stop><stop stop-color="#6001D2" offset="100%"></stop></linearGradient>
+        <clipPath id="clip-orb"><circle cx="10" cy="10" r="10"></circle></clipPath>
+    </defs>
+</svg>
