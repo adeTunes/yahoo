@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
 function MainPageTra() {
-  const [checkbox2State, setCheckbox2State] = useState(1)
   let inbox = null
   const [mainPageControls, setMainPageControls] = useState(1)
   const [checkboxState, setCheckboxState] = useState(1)
@@ -57,7 +56,6 @@ function MainPageTra() {
   const handleChange = (e) => {
     checkboxState === 1 && inbox? e.target.checked = true : e.target.checked = false;
     e.target.checked? setMainPageControls(2) : setMainPageControls(1)
-    e.target.checked? setCheckbox2State(2) : setCheckbox2State(1)
   }
   return (
     <>

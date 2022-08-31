@@ -1,37 +1,16 @@
 import { useRef, useState, useEffect } from "react";
-import MailOne from "../MailOne";
 
 function MainPageDo() {
-  const [checkbox2State, setCheckbox2State] = useState(1)
-  let inbox = <MailOne checkbox2State={checkbox2State}/>
-  const [mainPageControls, setMainPageControls] = useState(1)
-  const [checkboxState, setCheckboxState] = useState(1)
   const [sortList, setSortList] = useState(false)
-  const [caretDropdown, setCaretDropdown] = useState(false)
 
   let sortRef = useRef()
-  let caretRef = useRef()
   
-  const handdleCaretClick =() => {
-    caretDropdown === false? setCaretDropdown(true) : setCaretDropdown(false)
-  }
+
 
   const handleSortList = () => {
     sortList === false? setSortList(true) : setSortList(false)
   }
 
-  useEffect(() => {
-    let handler2 = (event) => {
-      if(!caretRef.current.contains(event.target)){
-        setCaretDropdown(false)
-      }
-    }
-    document.addEventListener('mousedown', handler2);
-
-    return () => {
-      document.removeEventListener('mousedown', handler2)
-    }
-  })
 
   useEffect(() => {
       let handler = (event) => {
@@ -46,15 +25,8 @@ function MainPageDo() {
       }
   })
 
-  const handleCheckboxState = () => {
-    checkboxState === 1? setCheckboxState(2) : setCheckboxState(1)
-  }
-  
-  const handleChange = (e) => {
-    checkboxState === 1 && inbox? e.target.checked = true : e.target.checked = false;
-    e.target.checked? setMainPageControls(2) : setMainPageControls(1)
-    e.target.checked? setCheckbox2State(2) : setCheckbox2State(1)
-  }
+
+
   return (
     <>
       <div className="col-1">
