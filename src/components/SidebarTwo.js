@@ -129,34 +129,34 @@ function SidebarTwo() {
                   <li className="settings-list flex">
                     <span className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></span>
                   </li>
-                  <li className="settings-list flex">
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(243, 176, 73), rgb(234, 125, 86), rgb(212, 32, 125))'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(160, 185, 82), rgb(79, 164, 109), rgb(0, 160, 160))'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(38, 176, 177), rgb(19, 115, 170), rgb(0, 52, 163))'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(141, 125, 162), rgb(89, 73, 110), rgb(32, 15, 53))'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(28, 62, 92), rgb(28, 62, 92), rgb(28, 62, 92))'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(92, 96, 112), rgb(92, 96, 112), rgb(55, 58, 67))'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'url(./images/night.jpg)'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
+                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'url(./images/road-trip.jpg)'}}></label>
+                  </li>
+                  <li className="settings-list-2 flex">
                     <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
                   </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
-                    <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
-                  </li>
-                  <li className="settings-list flex">
+                  <li className="settings-list-2 flex">
                     <label className='label-settings flex-1' title="Default" style={{backgroundImage: 'linear-gradient(45deg, rgb(114, 130, 251), rgb(114, 130, 251), rgb(121, 52, 247))'}}></label>
                   </li>
                 </ul>
@@ -167,7 +167,7 @@ function SidebarTwo() {
                         <div style={{height: '15px', backgroundImage: 'linear-gradient(45deg,#7282fb,#7282fb,#7934f7)'}}></div>
                       </div>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name="theme" />
                         Light
                       </div>
                     </div>
@@ -176,14 +176,14 @@ function SidebarTwo() {
                         <div style={{display: 'inline-block', background: '#fff', height: '36px', width: '44px', borderLeft: '1px solid #b9bdc5', borderRight: '1px solid #b9bdc5', borderTop: '1px solid #b9bdc5'}}></div>
                       </span>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name="theme" />
                         Medium
                       </div>
                     </div>
                     <div className="flex flex-col align-it gap-6px">
                       <span className="cursor-p" style={{display: 'flex', cursor: 'pointer', alignItems: 'flex-end', justifyContent: 'center', borderRadius: '2px', backgroundColor: "#f1f1f5", width: '76px', height: '52px', border: '1px solid #b9bdc5', backgroundPosition: '50%', backgroundImage: 'url("./images/theme.png")'}} htmlFor="theme-mode-MEDIUM" title="Medium"></span>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name="theme" />
                         Dark
                       </div>
                     </div>
@@ -201,7 +201,7 @@ function SidebarTwo() {
                         </div>
                       </div>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name='message-layout' />
                         List
                       </div>
                     </div>
@@ -217,7 +217,7 @@ function SidebarTwo() {
                         </div>
                       </div>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name='message-layout' />
                         Right
                       </div>
                     </div>
@@ -229,7 +229,7 @@ function SidebarTwo() {
                         </div>
                       </div>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name='message-layout' />
                         Bottom
                       </div>
                     </div>
@@ -247,7 +247,7 @@ function SidebarTwo() {
                         </div>
                       </div>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name="inbox-spacing" />
                         Small
                       </div>
                     </div>
@@ -259,7 +259,7 @@ function SidebarTwo() {
                         </div>
                       </div>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name="" />
                         Medium
                       </div>
                     </div>
@@ -270,7 +270,7 @@ function SidebarTwo() {
                         </div>
                       </div>
                       <div className="flex colgap-10 align-it">
-                        <input type="radio"  />
+                        <input type="radio" name="" />
                         Large
                       </div>
                     </div>
