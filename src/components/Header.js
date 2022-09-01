@@ -8,7 +8,29 @@ function Header() {
     const [allMailDrop, setAllMailDrop] = useState(false)
     const [toggleSearchIn, setToggleSearchIn] = useState(1)
     const [searchIn, setSearchIn] = useState('All mail')
+    const [value, setValue] = useState('')
+    const [fromValue, setFromValue] = useState('')
+    const [toValue, setToValue] = useState('')
+    const [subjectValue, setSubjectValue] = useState('')
+    const [keywordValue, setKeywordValue] = useState('')
 
+
+    const handleFromChange = (evt) => {
+        setFromValue(evt.target.value)
+    }
+    const handleToChange = (evt) => {
+        setToValue(evt.target.value)
+    }
+    const handleSubjectChange = (evt) => {
+        setSubjectValue(evt.target.value)
+    }
+    const handleKeywordChange = (evt) => {
+        setKeywordValue(evt.target.value)
+    }
+
+    const handleOnChange = (evt) => {
+        setValue(evt.target.value)
+    }
     const handleAllMail = () => {
         allMailDrop? setAllMailDrop(false) : setAllMailDrop(true)
     }
@@ -90,10 +112,17 @@ function Header() {
                     <a href="/">
                         <img src="https://s.yimg.com/nq/nr/img/yahoo_mail_global_english_white_1x.png" title="" alt="" />
                     </a>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{display: 'flex', flexDirection: 'row', maxWidth: '417px'}}>
                         <div ref={menuRef} style={{borderBottomLeftRadius: '6px', borderTopLeftRadius: '6px', background: '#fff', display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                            <span style={{position: 'relative'}}>
-                                <input type="text" style={{background: 'none'}} placeholder="Find messages, documents, photos or people"/>
+                            {/* Text field state change */}
+                            {searchIn !== 'All mail' && 
+                            <div className='flex align-it bg-white' style={{padding: '0 5px', color: '#1d2228', height: '24px', border: '1px solid #e0e4e9', lineHeight: '22px', borderRadius: '12px'}}>
+                                <svg viewBox="0 0 20 20" style={{width: '16px', fill: '#979ea8'}}><path d="M2.5 15.8c0 .4.3.7.7.7h13.6c.4 0 .7-.3.7-.7V10h-15v5.8zM16.8 5h-6.3l-.8-1.6C9.6 3.2 9.3 3 9 3H3.2c-.4 0-.7.3-.7.7v4.8h15V5.7c0-.4-.3-.7-.7-.7z"></path></svg>
+                                <div style={{padding: '0 10px 0 4px', whiteSpace: 'nowrap'}}>{searchIn}</div>
+                            </div>
+                            }
+                            <span className='flex-1' style={{position: 'relative'}}>
+                                <input type="text" style={{background: 'none'}} value={value + (fromValue && ' from: ' + fromValue) + (toValue && ' to: ' + toValue) + (subjectValue && ' subject: ' + subjectValue) + (keywordValue && ' keyword: ' + keywordValue)} onChange={handleOnChange} placeholder="Find messages, documents, photos or people"/>
                                 {/* dropdown state */}
                                 {
                                 dropdown === 2?
@@ -136,19 +165,19 @@ function Header() {
                                         </div>
                                         <span className='s-black fw-700'>From</span>
                                         <span className='flex just-btw bb-abs pad-15' style={{flex: 1}}>
-                                            <input type="text" />
+                                            <input type="text" value={fromValue} onChange={handleFromChange}/>
                                         </span>
                                         <span className='s-black fw-700'>To</span>
                                         <span className='flex just-btw bb-abs pad-15' style={{flex: 1}}>
-                                            <input type="text" />
+                                            <input type="text" value={toValue} onChange={handleToChange}/>
                                         </span>
                                         <span className='s-black fw-700'>Subject</span>
                                         <span className='flex just-btw bb-abs pad-15' style={{flex: 1}}>
-                                            <input type="text" />
+                                            <input type="text" value={subjectValue} onChange={handleSubjectChange}/>
                                         </span>
                                         <span className='s-black fw-700'>Keyword</span>
                                         <span className='flex just-btw bb-abs pad-15' style={{flex: 1}}>
-                                            <input type="text" />
+                                            <input type="text" value={keywordValue} onChange={handleKeywordChange}/>
                                         </span>
                                         <span className='s-black fw-700'>Date</span>
                                         <span className='flex just-btw bb-abs pad-15' style={{flex: 1}}>
