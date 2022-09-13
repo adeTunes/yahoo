@@ -49,6 +49,10 @@ function Header() {
         dropdown === 1? setDropDown(2): setDropDown(1)
     }
 
+    const handleKeypress = (e) => {
+        if(e.key === 'Backspace') setSearchIn('All mail')
+    }
+
     let menuRef = useRef()
     let allMailRef = useRef()
 
@@ -122,7 +126,7 @@ function Header() {
                             </div>
                             }
                             <span className='flex-1' style={{position: 'relative'}}>
-                                <input type="text" style={{background: 'none'}} value={value + (fromValue && ' from: ' + fromValue) + (toValue && ' to: ' + toValue) + (subjectValue && ' subject: ' + subjectValue) + (keywordValue && ' keyword: ' + keywordValue)} onChange={handleOnChange} placeholder="Find messages, documents, photos or people"/>
+                                <input type="text" style={{background: 'none'}} onKeyDown={handleKeypress} value={value + (fromValue && ' from: ' + fromValue) + (toValue && ' to: ' + toValue) + (subjectValue && ' subject: ' + subjectValue) + (keywordValue && ' keyword: ' + keywordValue)} onChange={handleOnChange} placeholder="Find messages, documents, photos or people"/>
                                 {/* dropdown state */}
                                 {
                                 dropdown === 2?
